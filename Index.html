@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Transformice Mobile</title>
+</head>
+<body>
+  <h1>Bem-vindo ao Clone do Transformice!</h1>
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="Nome de usuário" required><br>
+    <input type="password" id="password" placeholder="Senha" required><br>
+    <button type="submit">Entrar</button>
+    <button type="button" onclick="registrar()">Registrar</button>
+  </form>
+
+  <script>
+    function registrar() {
+      alert("Funcionalidade de registro ainda em desenvolvimento.");
+    }
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Login feito com sucesso! Bem-vindo, " + document.getElementById("username").value);
+    });
+  </script>
+</body>
+</html>
