@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>KDOWNLOADS - Jogos e Mods</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #002BFF, #00ff88);
+      color: #ffffff;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+    header p {
+      font-size: 18px;
+      margin: 5px 0 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    nav button {
+      background: #00cc88;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    nav button:hover {
+      background-color: #002BFF;
+      transform: scale(1.05);
+    }
+    .content {
+      padding: 20px;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .game-box {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border: 2px solid #00ff88;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff88;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KDOWNLOADS 🎮</h1>
+    <p>Jogos, Mods, Packs e Traduções por R$0,50 ou de graça!</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('steam')">🎮 Steam R$0,50</button>
+    <button onclick="showSection('antigos')">💾 Antigos Grátis</button>
+    <button onclick="showSection('mods')">🛠️ Mods & Packs</button>
+    <button onclick="showSection('traducoes')">🇧🇷 Traduções BR</button>
+    <button onclick="showSection('assistiu')">📺 Assistiu e Ganhou</button>
+  </nav>
+
+  <div class="content">
+    <div id="steam" class="section active">
+      <div class="game-box">
+        <h2>GTA V</h2>
+        <p>💰 Preço na Steam: R$129,90</p>
+        <p><strong>🔓 Liberação: R$0,50 via Pix ou assista vídeo</strong></p>
+      </div>
+    </div>
+
+    <div id="antigos" class="section">
+      <div class="game-box">
+        <h2>Age of Empires 2 (Clássico)</h2>
+        <p>📥 Grátis e leve. Em português.</p>
+      </div>
+    </div>
+
+    <div id="mods" class="section">
+      <div class="game-box">
+        <h2>Pack de Mods GTA SA - BR</h2>
+        <p>🏍️ Inclui motos, sons, roupas e mais!</p>
+      </div>
+    </div>
+
+    <div id="traducoes" class="section">
+      <div class="game-box">
+        <h2>Tradução PT-BR - The Sims 2</h2>
+        <p>🗣️ 100% em português para versão original.</p>
+      </div>
+    </div>
+
+    <div id="assistiu" class="section">
+      <div class="game-box">
+        <h2>Jogo Secreto 🔒</h2>
+        <p>🎥 Assista o vídeo abaixo pra desbloquear o download.</p>
+        <p><em>Funcionalidade será ativada em breve.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Site criado por <strong>Kaue Santos</strong> – © 2025 KDOWNLOADS. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
