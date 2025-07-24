@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>KDOWNLOADS - Jogos e Mods</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4faff;
+      color: #222;
+    }
+    header {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #00cc88;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav button:hover {
+      background-color: #007BFF;
+    }
+    .content {
+      padding: 20px;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .game-box {
+      background-color: #ffffff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KDOWNLOADS 🎮</h1>
+    <p>Jogos, Mods e Expansões com preço acessível para todos!</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('steam')">Jogos Steam R$0,50</button>
+    <button onclick="showSection('antigos')">Jogos Antigos Grátis</button>
+    <button onclick="showSection('mods')">Mods & Packs</button>
+    <button onclick="showSection('traducoes')">Traduções BR</button>
+    <button onclick="showSection('assistiu')">Assistiu e Ganhou</button>
+  </nav>
+
+  <div class="content">
+    <div id="steam" class="section active">
+      <div class="game-box">
+        <h2>GTA V</h2>
+        <p>Preço na Steam: R$129,90</p>
+        <p><strong>Liberação: R$0,50 via Pix ou assista vídeo</strong></p>
+      </div>
+    </div>
+
+    <div id="antigos" class="section">
+      <div class="game-box">
+        <h2>Age of Empires 2 (Clássico)</h2>
+        <p>Grátis e leve. Em português.</p>
+      </div>
+    </div>
+
+    <div id="mods" class="section">
+      <div class="game-box">
+        <h2>Pack de Mods GTA SA - BR</h2>
+        <p>Inclui motos, sons, roupas e mais!</p>
+      </div>
+    </div>
+
+    <div id="traducoes" class="section">
+      <div class="game-box">
+        <h2>Tradução PT-BR - The Sims 2</h2>
+        <p>100% em português para versão original.</p>
+      </div>
+    </div>
+
+    <div id="assistiu" class="section">
+      <div class="game-box">
+        <h2>Jogo Secreto 🔒</h2>
+        <p>Assista o vídeo abaixo pra desbloquear o download.</p>
+        <p><em>Funcionalidade será ativada em breve.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
