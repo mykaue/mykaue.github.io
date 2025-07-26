@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificação Masculina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Verificação de Entrada</h2>
+    <p><strong>Qual destes é um carro esportivo?</strong></p>
+    <button onclick="verificar('A')">A) Uno</button>
+    <button onclick="verificar('B')">B) Civic</button>
+    <button onclick="verificar('C')">C) Mustang</button>
+  </div>
+  <script>
+    function verificar(resposta) {
+      if (resposta === 'C') {
+        alert("✔️ Acesso liberado, prossiga com o login.");
+        window.location.href = "login.html";
+      } else {
+        alert("❌ Resposta errada. Acesso negado.");
+      }
+    }
+  </script>
+</body>
+</html>
