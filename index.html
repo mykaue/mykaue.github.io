@@ -2,28 +2,175 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Verificação Masculina</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Animes BR - O Mundo dos Otakus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0a0a0a, #000);
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff0066, #ff3399);
+      padding: 25px 0;
+      box-shadow: 0 0 25px #ff339955;
+    }
+
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.4em;
+      letter-spacing: 2px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .download-btn {
+      background: #ff0066;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1em;
+      margin: 25px auto;
+      transition: background 0.2s ease;
+    }
+    .download-btn:hover {
+      background: #ff3399;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #ff66b2;
+      font-size: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    /* CARDS DE ANIME */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 10px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #000;
+      padding-bottom: 15px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #ff66b2;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.9em;
+      margin: 0 15px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #0a0a0a;
+      color: #999;
+      font-size: 0.9em;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="jesus-logo.png" alt="Jesus Cristo" width="150">
-    <h2>🔐 Verificação de Entrada</h2>
-    <p><strong>Qual destes é um carro esportivo?</strong></p>
-    <button onclick="verificar('A')">A) Uno</button>
-    <button onclick="verificar('B')">B) Civic</button>
-    <button onclick="verificar('C')">C) Mustang</button>
-  </div>
-  <script>
-    function verificar(resposta) {
-      if (resposta === 'C') {
-        alert("✔️ Acesso liberado, prossiga com o login.");
-        window.location.href = "login.html";
-      } else {
-        alert("❌ Resposta errada. Acesso negado.");
-      }
-    }
-  </script>
+
+  <header>
+    <h1>🎌 Play Animes BR 🎌</h1>
+  </header>
+
+  <section class="section">
+    <h2>📱 Baixe o App Oficial</h2>
+    <a href="https://play.google.com/store/apps/details?id=com.play_animes_tv.appclient" target="_blank" class="download-btn">👉 Baixar Play Animes TV</a>
+    <p>Assista animes legendados e dublados direto no seu celular, grátis e sem travamentos!</p>
+  </section>
+
+  <section class="section">
+    <h2>🔥 Destaques da Semana</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.ibb.co/jLscYz2/jujutsu.jpg" alt="Jujutsu Kaisen">
+        <h3>Jujutsu Kaisen</h3>
+        <p>A batalha contra maldições continua — novos episódios disponíveis no app!</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.ibb.co/8Dqgd3L/onepiece.jpg" alt="One Piece">
+        <h3>One Piece</h3>
+        <p>Luffy e sua tripulação seguem em busca do tesouro lendário — confira os episódios!</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.ibb.co/wwtpNwW/demonslayer.jpg" alt="Demon Slayer">
+        <h3>Demon Slayer</h3>
+        <p>Tanjiro e Nezuko enfrentam novos desafios na vila dos ferreiros!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🎬 Trailers Recentes</h2>
+    <iframe src="https://www.youtube.com/embed/d4S7TQkZ_bY" title="Trailer Jujutsu Kaisen"></iframe>
+    <iframe src="https://www.youtube.com/embed/R2auY_kpv4o" title="Trailer One Piece"></iframe>
+    <iframe src="https://www.youtube.com/embed/VQGCKyvzIM4" title="Trailer Demon Slayer"></iframe>
+  </section>
+
+  <section class="section">
+    <h2>📚 Mangás Populares</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.ibb.co/zJdBqGh/manga1.jpg" alt="Chainsaw Man">
+        <h3>Chainsaw Man</h3>
+        <p>O mangá mais insano dos últimos tempos! Disponível nas melhores plataformas.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.ibb.co/Y3cqBzN/manga2.jpg" alt="Attack on Titan">
+        <h3>Attack on Titan</h3>
+        <p>Reviva a história que marcou uma geração com uma das tramas mais intensas do Japão.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Play Animes BR - Portal dos Otakus. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
